@@ -16,10 +16,10 @@ if [ ! -f "$PROJ_PATH/tmp/log.txt" ]; then
 fi
 
 # Run main executable, redirecting output to log.txt
-"$PROJ_PATH/build/main" > "$PROJ_PATH/tmp/log.txt 2>/dev/null"
+"$PROJ_PATH/build/main" > "$PROJ_PATH/tmp/log.txt" 2>&1
 if [ $? -ne 0 ]; then
     echo "An error occurred while running main."
     exit 1
 fi
 
-echo "Run successful! Check log.txt for result."
+echo "Run successful! Check log.txt for result." 

@@ -18,7 +18,7 @@ if not exist "%PROJ_PATH%\tmp\log.txt" (
 )
 
 REM run main.exe, output in log.txt
-"%PROJ_PATH%\build\main" > "%PROJ_PATH%\tmp\log.txt"
+"%PROJ_PATH%\build\main" > "%PROJ_PATH%\tmp\log.txt" 2>&1
 if %errorlevel% neq 0 (
     echo An error occurred while running main.exe.
     exit /b
