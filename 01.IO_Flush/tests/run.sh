@@ -1,19 +1,22 @@
 #!/bin/bash
 
+# Set project path to the parent directory of the script
+PROJ_PATH="$(dirname "$(realpath "$0")")/.."
+
 # Check if main executable does not exist
-if [ ! -f ../build/main ]; then
+if [ ! -f "$PROJ_PATH/build/main" ]; then
     echo "main does not exist. Please run build.sh or build.bat."
     exit 1
 fi
 
 # Create log.txt if it doesn't exist
-if [ ! -f ../tmp/log.txt ]; then
-    mkdir -p ../tmp
-    touch ../tmp/log.txt
+if [ ! -f "$PROJ_PATH/tmp/log.txt" ]; then
+    mkdir -p "$PROJ_PATH/tmp"
+    touch "$PROJ_PATH/tmp/log.txt"
 fi
 
 # Run main executable, redirecting output to log.txt
-../build/main > ../tmp/log.txt 2>/dev/null
+"$PROJ_PATH/build/main" > "$PROJ_PATH/tmp/log.txt 2>/dev/null"
 if [ $? -ne 0 ]; then
     echo "An error occurred while running main."
     exit 1
