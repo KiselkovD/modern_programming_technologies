@@ -1,6 +1,6 @@
 ## 01.IO_Flush
 
-### задача 1:
+### задача:
 
 - Откомпилировать и собрать программу, запустить, как есть.
   - ввод:
@@ -89,7 +89,7 @@
   Windows 11 23H2:
   PS C:\...\01.IO_Flush > .\tests\run.bat
   ````
-- <img src="https://github.com/KiselkovD/modern_programming_technologies/blob/main/res/image.png" alt="code" height="350"/>
+- ![alt text](<../res/image.png>)
 - ```
   PS C:\...\01.IO_Flush> .\build\main
   [puts_STDOUT]
@@ -118,5 +118,3 @@
 вывод:
 
     в файле log.txt не было последнего отступа но power shell и cmd всеравно вывели его корректно, похоже power shell и cmd самостоятельно добавляют отступ
-
-### задача 2:

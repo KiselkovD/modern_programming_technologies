@@ -1,0 +1,35 @@
+name: C CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up C compiler
+        uses: rlalik/setup-cpp-compiler@master
+        with:
+          compiler: gcc
+
+      - name: Compile Fractal Tests
+        run: |
+          gcc -o test_program 04.Fractal/test_main.c 04.Fractal/image.c 04.Fractal/fractal.c -I04.Fractal
+
+      - name: Run Fractal Tests
+        run: ./test_program
+
+      - name: Compile IO Flush Program
+        run: gcc 01.IO_Flush/src/main.c -o output
+
+      - name: Run IO Flush Program
+        run: ./output 0 1 1 # Пример аргументов; измените при необходимости
