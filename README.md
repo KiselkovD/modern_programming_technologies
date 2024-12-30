@@ -1,7 +1,6 @@
 # Modern Programming Technologies
 
 ![Build Status](https://github.com/KiselkovD/modern_programming_technologies/actions/workflows/ci.yml/badge.svg)
-[![Coverage Status](https://codecov.io/gh/KiselkovD/modern_programming_technologies/branch/main/graph/badge.svg)](https://codecov.io/gh/KiselkovD/modern_programming_technologies)
 
 ## Description
 
