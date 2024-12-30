@@ -31,4 +31,10 @@ UTEST_F(ImageTestFixture, ClearImage2)
     ASSERT_EQ(0, get_pixel(utest_fixture->i, 10, 10));
 }
 
+UTEST_F(ImageTestFixture, Check_fractal)
+{
+    line_end_fractal(utest_fixture->i, 1 + 120, 200, 63 + 120, 200);
+    ASSERT_EQ(255, get_pixel(utest_fixture->i, 1 + 120, 201));
+}
+
 UTEST_MAIN();

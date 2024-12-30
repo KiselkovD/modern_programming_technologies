@@ -2,6 +2,32 @@
 #include "image.h"
 #include "fractal.h"
 
+int findLargestN(int x);
+
+int main()
+{
+    image_p img = create_image(300, 300);
+    clear_image(img);
+
+    pixel_coord x1 = 1;
+    pixel_coord x2 = findLargestN(300);
+
+    pixel_coord y1 = 150;
+    pixel_coord y2 = 150;
+
+    printf("%d\n", findLargestN(100));
+
+    paint_line(img, 300, 300, 1 + 120, 100, 63 + 120, 100, 200);
+    line_mid_fractal(img, 1 + 120, 100, findLargestN(100) + 120, 100);
+
+    line_end_fractal(img, 1 + 120, 200, 63 + 120, 200);
+
+    empty_fractal(img);
+
+    save_pgm(img, "test.pgm");
+    return 0;
+}
+
 int findLargestN(int x)
 {
     int n = 1;
@@ -23,35 +49,4 @@ int findLargestN(int x)
     }
 
     return result; // Возвращаем найденное значение
-}
-
-int main()
-{
-    image_p img = create_image(300, 300);
-
-    pixel_coord x1 = 1;
-    pixel_coord x2 = findLargestN(300);
-
-    pixel_coord y1 = 150;
-    pixel_coord y2 = 150;
-
-    printf("so ");
-    for (pixel_coord p = 0; p < 300; ++p)
-        for (pixel_coord p2 = 0; p2 < 300; ++p2)
-            set_pixel(img, p, p2, (pixel_data)0);
-    printf("go\n");
-
-    printf("%d\n", findLargestN(300));
-
-    // paint_line(img, 300, 300, x1, y1, x2, y2, 255);
-    //  draw_fractal(img, x1, y1, x2, y2);
-
-    paint_line(img, 300, 300, 1 + 120, 100, 63 + 120, 100, 200);
-    draw_fractal(img, 1 + 120, 100, 63 + 120, 100);
-    paint_line(img, 300, 300, 1 + 120, 200, 63 + 120, 200, 200);
-    draw_fractal_2(img, 1 + 120, 200, 63 + 120, 200);
-    // empty_fractal(img);
-    printf("done\n");
-    save_pgm(img, "test.pgm");
-    return 0;
 }

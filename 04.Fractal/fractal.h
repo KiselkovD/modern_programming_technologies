@@ -13,8 +13,8 @@ void empty_fractal(image_p picture);
 // Функция для закрашивания линии
 void paint_line(unsigned char *img, int width, int height, int x1, int y1, int x2, int y2, int color);
 
-void draw_fractal(unsigned char *img, int x1, int y1, int x2, int y2);
-void draw_fractal_2(unsigned char *img, int x1, int y1, int x2, int y2);
+void line_mid_fractal(unsigned char *img, int x1, int y1, int x2, int y2);
+void line_end_fractal(unsigned char *img, int x1, int y1, int x2, int y2);
 // void line_mid_fractal(image_p picture,,,);
 
 #endif // _FRACTAL_H_
