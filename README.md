@@ -5,9 +5,8 @@
 
 ## Description
 
-В данном репозиторие было выполнено 4 задания.
-для каждого задания была создана своя ветка (кроме github_workflow), и папка
-в папке base proj также было расмотренно как может выглядеть организация файлов в проекте
-по окончанию основных задач все ветки были собраны в main для финальных правок
-в каждой папке присутствует readme с описанием работы
-также реализован github ci для io_flush и fractal
+This repository contains four assignments. Each assignment was developed in its own branch (except for the github_workflow branch) and has a corresponding folder.
+Additionally, the base_proj folder demonstrates how to organize files within a project effectively. After completing the main tasks, all branches were merged into the main branch for final adjustments.
+Each folder includes a README file that describes the functionality of the respective assignment. Furthermore, GitHub CI has been implemented for both the io_flush and fractal assignments.
+
+
